@@ -8,7 +8,7 @@ const Service = (props) => {
     const navigate = useNavigate();
 
     const navigateToCheckout =(id)=>{
-        navigate(`/service/${id}`)
+        navigate(`/checkout/${id}`)
     }
 
     return (

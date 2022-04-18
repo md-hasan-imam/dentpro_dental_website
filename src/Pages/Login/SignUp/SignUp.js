@@ -1,9 +1,32 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './SIgnUp.css'
 
 const SignUp = () => {
+
+    const handleSignUp = event => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        console.log(name, email, password);
+    }
+
+
     return (
         <div>
-            <h2>this is signup page</h2>
+            <div className='signup-form'>
+                <h2 style={{ textAlign: 'center' }}>Please Sign-Up</h2>
+                <form onSubmit={handleSignUp}>
+                    <input className='mt-5 mx-auto ps-2' type="text" name="name" id="name" placeholder='Your Name' />
+                    <input className='mx-auto ps-2' type="email" name="email" id="email" placeholder='Your Email' />
+                    <input className='mx-auto ps-2' type="password" name="password" id="password" placeholder='Password' />
+                    <input className='btn btn-primary w-50 mx-auto mt-4 mb-4' type="submit" />
+                </form>
+                <p className='text-center fs-5 '>Already have an account ? <Link to='/login' className='text-decoration-none'>Login </Link></p>
+
+            </div>
         </div>
     );
 };

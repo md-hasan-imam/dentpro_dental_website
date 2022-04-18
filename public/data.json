@@ -3,35 +3,35 @@
         "id": 1,
         "name": "Dental Implants",
         "price": "500",
-        "description": " Dental implants are roots placed in your mouth for either permanent teeth to be placed on or ones that you can remove. Dental implants are done to improve a patient's smile and usually their self esteem.",
+        "description": "Dental implants are roots placed in your mouth for either permanent teeth to be placed on or ones that you can remove. Dental implants are done to improve a patient's smile and usually their self esteem.",
         "img": "https://i.ibb.co/3kBbRpr/service2.jpg"
     },
     {
         "id": 2,
         "name": "Cosmetic Dentistry ",
         "price": "300",
-        "description": " A beautiful smile is one of the most sought after features in cosmetic medicine. People from all backgrounds and professions want a white, straight smile, and we can help make it a reality.",
+        "description": "A beautiful smile is one of the most sought after features in cosmetic medicine. People from all backgrounds and professions want a white, straight smile, and we can help make it a reality.",
         "img": "https://i.ibb.co/nMm7grd/service.jpg"
     },
     {
         "id": 3,
         "name": "Teeth Whitening",
         "price": "600",
-        "description": " A beautiful smile is one of the most sought after features in cosmetic medicine. People from all backgrounds and professions want a white, straight smile, and we can help make it a reality.",
+        "description": "A beautiful smile is one of the most sought after features in cosmetic medicine. People from all backgrounds and professions want a white, straight smile, and we can help make it a reality.",
         "img": "https://i.ibb.co/hXmJTBy/service3.jpg"
     },
     {
         "id": 4,
         "name": "Root Canal",
         "price": "400",
-        "description": " A root canal is a procedure used to repair and save a tooth that is badly decayed or becomes infected. Although normal tooth decay can become increasingly worse and bad empact on other tooths.",
+        "description": "A root canal is a procedure used to repair and save a tooth that is badly decayed or becomes infected. Although normal tooth decay can become increasingly worse and bad empact on other tooths.",
         "img": "https://i.ibb.co/hXmJTBy/service3.jpg"
     },
     {
         "id": 5,
         "name": "Teeth Cleaning",
         "price": "500",
-        "description": " Dental implants are roots placed in your mouth for either permanent teeth to be placed on or ones that you can remove.Dental implants are done to improve a patient's smile and usually their self esteem.",
+        "description": "Dental implants are roots placed in your mouth for either permanent teeth to be placed on or ones that you can remove.Dental implants are done to improve a patient's smile and usually their self esteem.",
         "img": "https://i.ibb.co/nMm7grd/service.jpg"
     },
     {
