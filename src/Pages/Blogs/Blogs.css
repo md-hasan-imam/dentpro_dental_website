@@ -1,0 +1,17 @@
+.question{
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(50, 50, 235);
+    text-align: left;
+    margin: 25px 100px;
+    background: rgb(177, 182, 193,0.1)
+}
+.question h2{
+    color: rgb(50, 50, 235);
+}
+.ans{
+    color: #222;
+    font-size: 18px;
+    font-weight: 500;
+}

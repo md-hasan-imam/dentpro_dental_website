@@ -1,9 +1,9 @@
 .signup-form{
-    width: 30%;
+    width: 40%;
     margin: 10px auto;
-    margin-top: 50px;
+    margin-top: 20px;
     border: 1px solid slategray;
-    padding: 60px 0px;
+    padding: 30px 10px;
     border-radius: 10px;
 }
 
@@ -15,4 +15,24 @@
     font-size: 20px;
     border-radius: 5px;
 
+}
+.line{
+    width: 50%;
+    height: 1px;
+    background-color:#353535 ;
+}
+
+.or{
+    padding: 15px;
+    line-height: 20px;
+}
+.others-signup button{
+    display: block;
+    margin: 10px auto;
+    background: #f1f1f1;
+    border: 1px solid #8e8e8e;
+    width: 200px;
+    height: 30px;
+    font-size: 13px;
+    border-radius: 10px;
 }
