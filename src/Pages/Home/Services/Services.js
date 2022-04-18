@@ -5,7 +5,7 @@ import './Services.css'
 
 const Services = () => {
 
-    const [services, setServices] = useSrvices();
+    const [services, setServices] = useSrvices([]);
 
     return (
         <div className=''>

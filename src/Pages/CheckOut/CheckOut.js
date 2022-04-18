@@ -4,17 +4,17 @@ import useSrvices from '../../Hooks/useSrvices';
 import Service from '../Home/Services/Service/Service';
 
 const CheckOut = () => {
-    const {serviceId} = useParams();
-    // const [services, setServices] = useSrvices();
-    // console.log(services);
+    const params = useParams();
 
-    // const checkOutService = services.map(service =>console.log(service.id) );
+    const [services, setServices] = useSrvices();
+    
+    
 
 
 
     return (
         <div>
-            <h2>this is service no {serviceId}</h2>
+            <h2>this is service no {params.serviceId}</h2>
         </div>
     );
 };
