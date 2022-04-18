@@ -1,5 +1,5 @@
-# Getting Started with Create React App
+# DentPro A Individual service provider website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# live site link
+https://dentpro-dental-website.web.app/
 
-## Available Scripts
