@@ -8,12 +8,9 @@
 }
 
 .single-service:hover{
-    transform: scale(1.05);
+    transform: scale(.95);
 }
 
-.single-service img{
-    transition: all linear 0.4s;
-}
 
 .checkout-button{
     position: absolute;

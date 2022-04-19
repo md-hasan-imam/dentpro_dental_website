@@ -1,11 +1,14 @@
-import { useRef, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import {useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGithub } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import './Login.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    const [resetEmail, setResetEmail] = useState('');
     const [
         signInWithEmailAndPassword,
         user,
@@ -19,6 +22,8 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/';
 
     const [sendPasswordResetEmail, sending,] = useSendPasswordResetEmail(auth);
+
+
 
     if (user || gitUser) {
         navigate(from, { replace: true });
@@ -38,15 +43,15 @@ const Login = () => {
     const handleSignInWithGithub = () => {
         signInWithGithub();
     }
-    const [resetEmail, setResetEmail] = useState('');
+  
 
     return (
         <div>
             <div className='login-form'>
                 <h2 style={{ textAlign: 'center' }}>Please Login</h2>
                 <form onSubmit={handleSignIn}>
-                    <input className='mt-5 mx-auto mb-4 ps-2' type="email" name="email" id="email" placeholder='Your Email' value={resetEmail} onChange={(e) => setResetEmail(e.target.value)} />
-                    <input className='mx-auto ps-2' type="password" name="password" id="password" placeholder='Password' />
+                    <input className='mt-5 mx-auto mb-4 ps-2' type="email" name="email" id="email" placeholder='Your Email' value={resetEmail} onChange={(e) => setResetEmail(e.target.value)}  required />
+                    <input className='mx-auto ps-2' type="password" name="password" id="password" placeholder='Password'  required/>
                     <input onClick={signInWithEmailAndPassword} className='btn btn-primary w-50 mx-auto mt-4 mb-3' type="submit" />
                     {errorELement}
                 </form>
@@ -54,8 +59,14 @@ const Login = () => {
 
                 <button className='btn btn-light'
                     onClick={async () => {
-                        await sendPasswordResetEmail(resetEmail);
-                        alert('Sent email');
+                        if(resetEmail){
+                            await sendPasswordResetEmail(resetEmail);
+                            toast('Sent email');
+                        }
+                        else{
+                            toast('please enter your email first')
+                        }
+                        
                     }}
                 >
                     Reset password
@@ -70,7 +81,7 @@ const Login = () => {
                         <button onClick={handleSignInWithGithub} className=''>Login with Github</button>
                     </div>
                 </div>
-
+                    <ToastContainer />
             </div>
         </div>
     );
