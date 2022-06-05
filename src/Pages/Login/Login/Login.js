@@ -23,7 +23,9 @@ const Login = () => {
 
     const [sendPasswordResetEmail, sending,] = useSendPasswordResetEmail(auth);
 
-
+    if(loading ){
+        return <Loading></Loading>
+    }
 
     if (user || gitUser) {
         navigate(from, { replace: true });
@@ -43,6 +45,8 @@ const Login = () => {
     const handleSignInWithGithub = () => {
         signInWithGithub();
     }
+
+    
   
 
     return (
@@ -52,7 +56,7 @@ const Login = () => {
                 <form onSubmit={handleSignIn}>
                     <input className='mt-5 mx-auto mb-4 ps-2' type="email" name="email" id="email" placeholder='Your Email' value={resetEmail} onChange={(e) => setResetEmail(e.target.value)}  required />
                     <input className='mx-auto ps-2' type="password" name="password" id="password" placeholder='Password'  required/>
-                    <input onClick={signInWithEmailAndPassword} className='btn btn-primary w-50 mx-auto mt-4 mb-3' type="submit" />
+                    <input className='btn btn-primary w-50 mx-auto mt-4 mb-3' type="submit" />
                     {errorELement}
                 </form>
                 <p className='text-center '><small> Have no account ? </small><Link to='/signup' className='text-decoration-none'>Please Sign-up</Link></p>

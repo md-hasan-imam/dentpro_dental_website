@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './SIgnUp.css'
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 const SignUp = () => {
 
@@ -18,6 +19,10 @@ const SignUp = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         createUserWithEmailAndPassword(email, password);
+    }
+    
+    if(loading ){
+        return <Loading></Loading>
     }
     
 
